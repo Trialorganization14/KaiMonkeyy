@@ -4,17 +4,19 @@ on:
     branches:
       - master
   pull_request:
+
 jobs:
   inspec_check:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Inspec
-        run: inspec exec test.rb -t ssh://user@hostname --reporter=json:/inspec-output/inspec_results.json
+      - run : curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
+      - name: Run Inspec  
+        run: inspec exec test.rb --reporter=json:/inspec-output/inspec_results.json
       - name: Upload Inspec Results
         uses: actions/upload-artifact@v2
         with:
           name: inspec_results
-          path: inspec_results.json
+          path: /inspec-output/inspec_results.json
 
   inspec_tools_compliance:
     runs-on: ubuntu-latest
