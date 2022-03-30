@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Run Prisma Cloud IaC Scan to check 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - name: Checkout repo.
+        uses: actions/checkout@v2....%
 
       - name: Run Bridgecrew 
         id: Bridgecrew
