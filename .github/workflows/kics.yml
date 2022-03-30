@@ -1,4 +1,4 @@
-name: Snyk Infrastructure as Code Security Scan
+name: Kics Infrastructure as Code Security Scan
 
 on:
   push:
