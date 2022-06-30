@@ -18,7 +18,7 @@ jobs:
         # scanning two directories: ./terraform/ ./cfn-templates/ plus a single file
         path: ./terraform/aws/
         output_path: myResults/
-        ignore-on-exit: all
+        ignore-on-exit: results
     # Display the results in json format
     - name: display kics results
       run: |
