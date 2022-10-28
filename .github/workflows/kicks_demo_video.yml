@@ -17,7 +17,7 @@ jobs:
        sudo mkdir path
        docker pull checkmarx/kics:latest
        #docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics:ubi8 scan -p $GITHUB_WORKSPACE/terraform -o /$GITHUB_WORKSPACE -v
-       docker run -u $UID:$GID -v $PWD:$GITHUB_WORKSPACE/path checkmarx/kics:ubi8 scan -p $GITHUB_WORKSPACE/terraform -o /$GITHUB_WORKSPACE/path -v
+       docker run -u $UID:$GID -v $PWD:/path checkmarx/kics:ubi8 scan -p $GITHUB_WORKSPACE/terraform -o /path -v
        #wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
        #sudo rm -rf $GITHUB_WORKSPACE/go
        #pwd
