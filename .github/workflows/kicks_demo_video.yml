@@ -18,9 +18,9 @@ jobs:
        sudo rm -rf /usr/local/go
        pwd
        sudo ls -al
-       sudo tar -xzf /home/runner/work/KaiMonkeyy/KaiMonkeyy/go1.18.7.linux-amd64.tar.gz
+       sudo tar -xzf $GITHUB_WORKSPACE/go1.18.7.linux-amd64.tar.gz
        go version
-       cd go1.18.7.linux-amd64
+       sudo ls -al
        git clone https://github.com/Checkmarx/kics.git
        cd kics
        make build
