@@ -14,7 +14,7 @@ jobs:
       
     - name: run kics Scan
       run: |
-       # wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
+       wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
        sudo rm -rf $GITHUB_WORKSPACE/go
        pwd
        sudo ls -al
