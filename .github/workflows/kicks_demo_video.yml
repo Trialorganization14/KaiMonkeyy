@@ -17,8 +17,8 @@ jobs:
        wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
        sudo rm -rf /usr/local/go
        pwd
-       sudo tar -xzf ${GITHUB.WORKSPACE}/go1.18.7.linux-amd64.tar.gz
        sudo ls -al
+       sudo tar -xzf /home/runner/work/KaiMonkeyy/KaiMonkeyy/go1.18.7.linux-amd64.tar.gz
        go version
        cd go1.18.7.linux-amd64
        git clone https://github.com/Checkmarx/kics.git
