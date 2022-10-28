@@ -16,7 +16,7 @@ jobs:
       run: |
        wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
        sudo rm -rf /usr/local/go
-       sudo tar -xzf go1.18.7.linux-amd64.tar.gz
+       sudo tar -xzf /go1.18.7.linux-amd64.tar.gz
        sudo ls -al
        go version
        cd go1.18.7.linux-amd64
