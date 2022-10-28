@@ -6,28 +6,21 @@ on:
   
 jobs:
   Kicks-iac-security:
+    name: IAC scan
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    # Scan Iac with kics
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
     - name: run kics Scan
-    - run: |
+      run: |
        wget https://go.dev/dl/go1.19.2.linux-amd64.tar.gz
        tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
        go version
        git clone https://github.com/Checkmarx/kics.git
        cd kics
        make build
-    
-     # uses: checkmarx/kics-github-action@v1.5
-     # with:
-        # scanning two directories: ./terraform/ ./cfn-templates/ plus a single file
-      #  path: ./terraform/aws/
-      #  output_path: myResults/
-      # output_formats: json
-      #  ignore-on-exit: results
+       
     # Display the results in json format
     - name: display kics results
       run: |
