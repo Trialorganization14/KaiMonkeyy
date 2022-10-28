@@ -15,15 +15,16 @@ jobs:
     - name: run kics Scan
       run: |
        # wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
-       #sudo rm -rf /usr/local/go
-       #pwd
-       #sudo ls -al
-       #sudo tar -xzf $GITHUB_WORKSPACE/go1.18.7.linux-amd64.tar.gz
+       sudo rm -rf $GITHUB_WORKSPACE/go
+       pwd
+       sudo ls -al
+       sudo tar -xzf $GITHUB_WORKSPACE/go1.18.7.linux-amd64.tar.gz
        go version
        sudo ls -al
-       #git clone https://github.com/Checkmarx/kics.git
-       #cd kics
-       #make build
+       git clone https://github.com/Checkmarx/kics.git
+       cd kics
+       make build
+       ./bin/kics scan -p '<path-of-your-project-to-scan>' --report-formats json -o ./results
        
     # Display the results in json format
     - name: display kics results
