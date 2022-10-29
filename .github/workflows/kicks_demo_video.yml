@@ -19,14 +19,14 @@ jobs:
        docker pull checkmarx/kics:latest
        docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics:ubi8 scan -p $GITHUB_WORKSPACE/terraform --report-formats "all"  --ignore-on-exit "all" -o /$GITHUB_WORKSPACE -v
        echo 4a1e6b34-1008-4e61-a5f2-1f7c276f8d14
-       docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics remediate --include-ids "4a1e6b34-1008-4e61-a5f2-1f7c276f8d14" --results "results.json"
+       docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics remediate --include-ids "f6b7acac2d541d8c15c88d2be51b0e6abd576750b71c580f2e3a9346f7ed0e67,4a1e6b3410084e61a5f21f7c276f8d14" --results "results.json"
        
     - name: run kics remediate
       continue-on-error: true
       run: |
        echo 4a1e6b34-1008-4e61-a5f2-1f7c276f8d14
        docker pull checkmarx/kics:latest       
-       docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics remediate --include-ids "4a1e6b34-1008-4e61-a5f2-1f7c276f8d14" --results "results.json"
+       docker run -u $UID:$GID -v $PWD:/$GITHUB_WORKSPACE checkmarx/kics remediate --include-ids "4a1e6b3410084e61a5f21f7c276f8d14,f6b7acac2d541d8c15c88d2be51b0e6abd576750b71c580f2e3a9346f7ed0e67" --results "results.json"
 
        #docker run -u $UID:$GID -v $PWD:/path checkmarx/kics:ubi8 scan -p $GITHUB_WORKSPACE/terraform --report-formats "all" -o /path -v 
        #wget https://go.dev/dl/go1.18.7.linux-amd64.tar.gz
