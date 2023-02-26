@@ -1,1 +1,5 @@
-secret= "Password123"
+- text: >
+    client id =  ABIAX52MPYOTPRUCRC22
+    CLIENT SECRET = hjshnk5ex5u34565d4654HJKGjhz545d89sjkjak
+  client_id: ABIAX52MPYOTPRUCRC22
+  client_secret: hjshnk5ex5u34565d4654HJKGjhz545d89sjkjak
