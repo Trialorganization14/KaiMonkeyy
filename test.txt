@@ -4,5 +4,5 @@
   client_id: ABIAX52MPYOTPRUCRC22
   client_secret: hjshnk5ex5u34565d4654HJKGjhz545d89sjkjak
   
-  client_secret: hjshnk5ex5u34565d4654HJKGjhz545d89sjkjtp
+  client_secret: hjshnk5ex5u34565d4654HJKGjhz545d89sjkjto
   
